@@ -1,0 +1,250 @@
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: sans-serif;
+	font-family: 'Noto Sans SC', sans-serif;
+}
+
+/* ------------------------------------ */
+a {
+	margin: 0px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+a:focus {
+	outline: none !important;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #111;
+  border-radius: 20px;
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #222; 
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-table100 {
+  width: 100%;
+  min-height: 100vh;
+  background: #c850c0;
+  background: -webkit-linear-gradient(bottom left, #4158d0, #c850c0);
+  background: -o-linear-gradient(bottom left, #4158d0, #c850c0);
+  background: linear-gradient(to top right, #4158d0, #c850c0);
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+}
+
+.wrap-table100 {
+  width: 1170px;
+}
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+tbody {
+    display:block;
+    height: 80vh;
+    overflow:auto;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;/* even columns width , fix width of table too*/
+}
+thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+table * {
+  position: relative;
+}
+table td, table th {
+  padding-left: 8px;
+}
+table thead tr {
+  height: 60px;
+  background: #36304a;
+  color: #ccc;
+}
+table tbody tr {
+  height: 50px;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table tbody tr td:last-child {
+	background-color: rgba(0,0,0,0.8);
+}
+table td, table th {
+  text-align: left;
+}
+table td.l, table th.l {
+  text-align: right;
+}
+table td.c, table th.c {
+  text-align: center;
+}
+table td.r, table th.r {
+  text-align: center;
+}
+
+
+.table100-head th{
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: unset;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+tbody tr {
+  font-size: 15px;
+  color: #808080;
+  line-height: 1.2;
+  font-weight: unset;
+}
+
+tbody tr:hover {
+  color: #eee;
+  background-color: #ccc;
+  cursor: pointer;
+}
+tbody tr td:hover {
+  	background-color: #aaa;
+  	color: #fff;
+}
+
+
+
+@media screen and (max-width: 480px) {
+  table {
+    display: block;
+  }
+  table > *, table tr, table td, table th {
+    display: block;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+  	width: 100%;
+    height: auto;
+    padding: 20px 0;
+    border-bottom: 1px #444 solid;
+  }
+  table tbody tr td {
+    padding:10px 20% !important;
+    margin-bottom: 24px;
+   
+    text-align: right;
+  }
+  table tbody tr td:first-child {
+   background: #eee;
+   color: #333
+   padding: 5px 0;
+  } 
+  table tbody tr td:last-child {
+   margin-bottom: 0;
+  } 
+  table tbody tr td:before {
+    font-size: 14px;
+    color: #999999;
+    line-height: 1.2;
+    font-weight: unset;
+    position: absolute;
+    width: 40%;
+    left: 30px;
+    top: 0;
+  }
+  table tbody tr td:nth-child(1):before {
+    content: "Country";
+    padding: 10px;
+    text-align: left;
+  }
+  table tbody tr td:nth-child(2):before {
+    content: "Total Cases";
+    padding: 6px;
+    text-align: left;
+  }
+  table tbody tr td:nth-child(3):before {
+    content: "Active Cases";
+    padding: 6px;
+    text-align: left;
+  }
+  table tbody tr td:nth-child(4):before {
+    content: "Recovered Cases";
+    padding: 6px;
+    text-align: left;
+  }
+  table tbody tr td:nth-child(5):before {
+    content: "New Cases";
+    padding: 6px;
+    text-align: left;
+  }
+  table tbody tr td:nth-child(6):before {
+    content: "Total Cases";
+    padding: 6px;
+	text-align: left;
+  }
+  table tbody tr td:nth-child(7):before {
+    content: "Total Deaths";
+    padding: 6px;
+    text-align: left;
+  }
+  
+
+  tbody tr {
+    font-size: 14px;
+  }
+  .container-table100 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
